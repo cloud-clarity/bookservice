@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RestController
 public class BookController {
 
     @Autowired
-    BookRepository repository;
+    private BookRepository repository;
 
     @GetMapping("/book")
     public List<Book> books() {
